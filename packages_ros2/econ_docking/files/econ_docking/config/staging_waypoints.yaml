@@ -1,0 +1,11 @@
+waypoints:
+  waypoint1:
+    orientation:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+      w: 1.0
+    pose:
+      x: -1.0
+      y: 2.5
+      z: 0.0
