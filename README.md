@@ -98,15 +98,6 @@ See [Technical_Manual.md](Technical_Manual.md) for complete node and topic summa
 - `aruco_marker_detector`: publishes marker detection and offset
 - `navigate_to_charging_dock_no_nav2`: generates `cmd_vel`, publishes `/docking_charged`
 
-## 🧪 Launch Files
-- `packages_ros2/econ_docking/files/econ_docking/launch/econ_aruco_docking.launch.py`
-- `packages_ros2/econlidar/files/econlidar/launch/battery_waypoint_docking_launch.py`
-
 ## 📌 Notes
 - Service names used by code: `econ-corridorrun_nav.service`, `econ-corridorrun_docking.service` (and optional `e-condocking.service` wrapper)
 - Configure thresholds and marker ID via launch parameters and config YAML
-
-## 📚 References
-- `packages_ros2/econ_docking/files/econ_docking/src/battery_monitor_and_docking.cpp`
-- `packages_ros2/econ_docking/files/econ_docking/launch/econ_aruco_docking.launch.py`
-- `packages_ros2/econlidar/files/econlidar/src/battery_monitor_and_navigate_docking.cpp`
