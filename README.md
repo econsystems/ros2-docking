@@ -41,7 +41,7 @@ E-Con Corridor Docking provides:
 
 ## 🖼️ Screenshots & Demo
 ### Docking Demo Image
-![Docking demo](DEMO_Videos/DOCKING_ECON-ROVER.jpeg)
+<img src="DEMO_Videos/DOCKING_ECON-ROVER.jpeg" width="50%" />
 
 ### Video
 - ▶️ [Docking Demo Video](DEMO_Videos/Docking_demo_rover_video.mp4)
