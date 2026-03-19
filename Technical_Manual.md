@@ -78,14 +78,14 @@ ros2 launch econ_docking econ_aruco_docking.launch.py
 
 ### `battery_monitor_and_docking` (battery manager)
 
-#### Service-based Production Flow
+  #### Service-based Production Flow
 
-We use **systemd service scripts** to manage task-level switching between navigation and docking, ensuring efficient resource utilization and faster charging cycles. The services (`econ-corridorrun_base`, `econ-corridorrun_nav`, `econ-corridorrun_docking`) automatically switch operational modes based on battery status.
+  We use **systemd service scripts** to manage task-level switching between navigation and docking, ensuring efficient resource utilization and faster charging cycles. The services (`econ-corridorrun_base`, `econ-corridorrun_nav`, `econ-corridorrun_docking`) automatically switch operational modes based on battery status.
 
-This transition logic is handled by the **battery_manager node**, which monitors system state and triggers the appropriate service actions.
+  This transition logic is handled by the **battery_manager node**, which monitors system state and triggers the appropriate service actions.
 
-These scripts can be customized based on your application requirements. For detailed implementation, refer to the battery manager node:  
-[`battery_monitor_and_docking.cpp`](packages_ros2/econ_docking/files/econ_docking/src/battery_monitor_and_docking.cpp)
+  These scripts can be customized based on your application requirements. For detailed implementation, refer to the battery manager node:  
+  [`battery_monitor_and_docking.cpp`](packages_ros2/econ_docking/files/econ_docking/src/battery_monitor_and_docking.cpp)
 
 - **Input topics**:
   - `battery_info` (`sensor_msgs/msg/BatteryState`)
