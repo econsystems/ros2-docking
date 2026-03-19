@@ -34,10 +34,7 @@ This package implements autonomous battery-based docking for a robot using ArUco
 6. After undocking and battery satisfies threshold, docking node publishes `docking_charged=true`.
 7. Battery manager receives `docking_charged` and if battery is no longer low, it stops docking service and restarts nav service.
 
-## Launch file
-`launch/econ_aruco_docking.launch.py`
-
-### Run
+### Launch file Run
 ```bash
 ros2 launch econ_docking econ_aruco_docking.launch.py
 ```
@@ -80,6 +77,16 @@ ros2 launch econ_docking econ_aruco_docking.launch.py
   3. On failure, retries; after max retries publishes `reached_spawn=false`, backs up logs.
 
 ### `battery_monitor_and_docking` (battery manager)
+
+#### Service-based Production Flow
+
+We use **systemd service scripts** to manage task-level switching between navigation and docking, ensuring efficient resource utilization and faster charging cycles. The services (`econ-corridorrun_base`, `econ-corridorrun_nav`, `econ-corridorrun_docking`) automatically switch operational modes based on battery status.
+
+This transition logic is handled by the **battery_manager node**, which monitors system state and triggers the appropriate service actions.
+
+These scripts can be customized based on your application requirements. For detailed implementation, refer to the battery manager node:  
+[`battery_monitor_and_docking.cpp`](packages_ros2/econ_docking/files/econ_docking/src/battery_monitor_and_docking.cpp)
+
 - **Input topics**:
   - `battery_info` (`sensor_msgs/msg/BatteryState`)
   - `reached_spawn` (`std_msgs/msg/Bool`)

@@ -86,9 +86,6 @@ source install/setup.bash
 ros2 launch econ_docking econ_aruco_docking.launch.py
 ```
 
-### Service-based production flow
-Use systemd service scripts from your embedded image (`econ-corridorrun_base`, `econ-corridorrun_nav`, `econ-corridorrun_docking`) to switch modes automatically.
-
 ## 🔗 Node Summary (Detailed docs)
 See [Technical_Manual.md](Technical_Manual.md) for complete node and topic summary, parameters, and service details.
 
