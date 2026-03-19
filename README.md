@@ -1,4 +1,4 @@
-# E-Con Corridor Docking (ROS 2)
+# E-Con Docking System (ROS 2)
 
 This repository contains a complete ROS 2 package and Yocto-enabled embedded build flow for autonomous corridor docking using Nav2, ArUco marker detection, and battery-aware mode switching.
 
